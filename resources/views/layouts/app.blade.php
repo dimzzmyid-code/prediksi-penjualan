@@ -14,6 +14,9 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
     </style>
+
+    {{-- Tambahan agar CSS dari @push('styles') di halaman child terbaca --}}
+    @stack('styles')
 </head>
 <body class="bg-slate-100">
 
@@ -93,6 +96,8 @@
         </main>
     </div>
 </div>
+
+@stack('scripts')
 
 </body>
 </html>

@@ -81,6 +81,10 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/laporan/pdf', [LaporanController::class, 'pdf'])
         ->name('laporan.pdf');
+
+    // Clear History Laporan
+    Route::delete('/laporan/clear', [LaporanController::class, 'clear'])
+        ->name('laporan.clear');
 });
 
 // Route authentication bawaan Laravel Breeze
